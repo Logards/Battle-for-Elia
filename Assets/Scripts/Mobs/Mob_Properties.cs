@@ -5,20 +5,20 @@ using UnityEngine;
 public class Mob_Properties : MonoBehaviour
 {
     public float speed = 0.5f;
-    public float health = 0.5f;
+    public float health = 10f;
     public float damage = 0.5f;
     public float range = 1f;
+    public int goldsLoot = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed -= Random.Range(0f, 0.2f);
-        speed = speed / 10;
+        speed = (speed - Random.Range(0f, 0.2f)) / 10;
+        goldsLoot = Random.Range(1, 5);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Properties>().golds += goldsLoot;
     }
 }
