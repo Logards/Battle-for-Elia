@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 150
   toSpawn: {fileID: 1663163305982210158, guid: 21ce1895f3824fe48b0470d8c7d97c44, type: 3}
-  radius: 0.25
+  radius: 1
   x_center: 0
   y_center: 0
