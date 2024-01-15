@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4832958023110395779}
   m_Layer: 0
   m_Name: Mob
-  m_TagString: Untagged
+  m_TagString: Enemis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -133,3 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c6d6fc88dcc3942a786e97ea977643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
