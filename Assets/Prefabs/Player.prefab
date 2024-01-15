@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5615545971080575282}
   - component: {fileID: 1326128582906059040}
   - component: {fileID: 2530478270562579451}
-  - component: {fileID: -4585999928575533772}
+  - component: {fileID: 8968844882480824467}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8080838219406024295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11100006, y: 1.4320002, z: 0}
+  m_LocalPosition: {x: 0.10000006, y: 1.062, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -150,7 +150,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4585999928575533772
+--- !u!114 &8968844882480824467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,4 +277,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 6311462224793585393, guid: 5764f3230d7354844827bc3ee56a2c21, type: 3}
-  tower: {fileID: 0}
+  tower: {fileID: 8968844882480824467}
