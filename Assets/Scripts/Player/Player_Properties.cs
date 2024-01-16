@@ -17,6 +17,6 @@ public class Player_Properties : MonoBehaviour
 
     void Update()
     {
-        //goldCount.SetText(golds.ToString());
+        goldCount.SetText(golds.ToString());
     }
 }
