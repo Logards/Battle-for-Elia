@@ -586,6 +586,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1535855498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3534579774784712691, guid: 56f812c5fb0a3fd40961c362333c0bd2, type: 3}
+  m_PrefabInstance: {fileID: 3371566602405633788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1572698092 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5871376019228588017, guid: 39316caed3eb6364282554a299c3edfd, type: 3}
@@ -734,9 +739,33 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: toSpawn
+      value: 
+      objectReference: {fileID: 1663163305982210158, guid: 287ac3e49c58c6846ae401060b4af916, type: 3}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
       propertyPath: spawnCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: GameManagerObject
+      value: 
+      objectReference: {fileID: 1535855498}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: MobTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: MobTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1663163305982210158, guid: 21ce1895f3824fe48b0470d8c7d97c44, type: 3}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: MobTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1663163305982210158, guid: 287ac3e49c58c6846ae401060b4af916, type: 3}
+    - target: {fileID: 6297794720248565428, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
+      propertyPath: MobTypes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1663163305982210158, guid: 9ee333628e7dca4458590c33cc4118e1, type: 3}
     - target: {fileID: 7694451993814788188, guid: 316c41900b76c5740b4cb76567abc82b, type: 3}
       propertyPath: m_Name
       value: Spawner

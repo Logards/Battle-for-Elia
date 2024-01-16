@@ -9,11 +9,16 @@ public class Mob_Properties : MonoBehaviour
     public float damage = 0.5f;
     public float range = 1f;
     public int goldsLoot = 1;
+    public string type = "base";
 
-    // Start is called before the first frame update
     void Start()
     {
-        speed = (speed - Random.Range(0f, 0.2f)) / 10;
+
+        float a = type == "runner" ? Random.Range(0.2f,1f) : 0.2f;
+
+        speed = (speed + Random.Range(0f, (type == "runner" ? Random.Range(0.2f, 1f) : 0.2f))) / 10;
+        health = (health + Random.Range(0f, (type == "tank" ? Random.Range(0.2f, 1f) : 0.2f))) / 10;
+        damage = (damage + Random.Range(0f, (type == "tank" || type == "base" ? Random.Range(0.2f, 0.5f) : 0.2f))) / 10;
         goldsLoot = Random.Range(1, 5);
     }
 

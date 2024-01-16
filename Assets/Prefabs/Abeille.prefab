@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 4832958023110395779}
   - component: {fileID: -5147053118978317091}
   - component: {fileID: 7507312592393290738}
-  - component: {fileID: 5485527432639066805}
+  - component: {fileID: 6208239275952223996}
   m_Layer: 0
-  m_Name: Mob
+  m_Name: Abeille
   m_TagString: Enemis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 1663163305982210158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44146445, y: 1.0520453, z: -2}
+  m_LocalPosition: {x: -0.44146445, y: 1.0520453, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 468855120, guid: 52bbbdd39398dbe41970ecc66fcf9b8c, type: 3}
+  m_Sprite: {fileID: 1723670459, guid: 17e4800e79089ea44b344d17b9c3530e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,13 +261,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf894621efc109045bca5baeacccbcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.2
   health: 1
-  damage: 0.7
+  damage: 0.5
   range: 1
   goldsLoot: 1
-  type: base
---- !u!95 &5485527432639066805
+  type: runner
+--- !u!95 &6208239275952223996
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ Animator:
   m_GameObject: {fileID: 1663163305982210158}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3bd01d918af4a7c44a440a3121668e11, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4ce536e860637ce4ba6b20b85945509e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
