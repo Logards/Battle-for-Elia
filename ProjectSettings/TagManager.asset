@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemis
   - arrow
+  - Spawn
   layers:
   - Default
   - TransparentFX
