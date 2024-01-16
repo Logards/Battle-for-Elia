@@ -9,6 +9,11 @@ public class Attack : MonoBehaviour
     public Tower tower = new Tower();
     private bool isAttack = false;
 
+    private void Start()
+    {
+
+    }
+
 
     public void OnTriggerStay2D(Collider2D collision)
     {
