@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  health: 2
+  health: 1.8
   damage: 0.8
   range: 1
   goldsLoot: 1

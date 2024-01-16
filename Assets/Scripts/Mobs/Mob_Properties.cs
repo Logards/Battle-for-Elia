@@ -17,8 +17,8 @@ public class Mob_Properties : MonoBehaviour
         float a = type == "runner" ? Random.Range(0.2f,1f) : 0.2f;
 
         speed = (speed + Random.Range(0f, (type == "runner" ? Random.Range(0.2f, 1f) : 0.2f))) / 10;
-        health = (health + Random.Range(0f, (type == "tank" ? Random.Range(0.2f, 1f) : 0.2f))) / 10;
-        damage = (damage + Random.Range(0f, (type == "tank" || type == "base" ? Random.Range(0.2f, 0.5f) : 0.2f))) / 10;
+        health = (health + Random.Range(0f, (type == "tank" ? Random.Range(0.2f, 1f) : 0.2f)));
+        damage = (damage + Random.Range(0f, (type == "tank" || type == "base" ? Random.Range(0.2f, 0.5f) : 0.2f)));
         goldsLoot = Random.Range(1, 5);
     }
 

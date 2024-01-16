@@ -14,18 +14,19 @@ public class Attack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemis")
         {
-            StartCoroutine(AttackSpeed());
+            StartCoroutine(AttackSpeed(collision.gameObject));
         }     
     }
 
-    public IEnumerator AttackSpeed()
+    public IEnumerator AttackSpeed(GameObject target)
     {
         if (isAttack)
         {
             yield break;
         }
         isAttack = true;
-        Instantiate(arrow, transform.position, Quaternion.identity);
+        GameObject currentArrow = Instantiate(arrow, transform.position, Quaternion.identity);
+        currentArrow.GetComponent<Arrow>().target = target;
         yield return new WaitForSeconds(tower.attackSpeed);
         isAttack = false;
     }
