@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
@@ -9,21 +10,21 @@ public class Spawner : MonoBehaviour
 {
     public GameObject toSpawn;
 
-    public GameObject GameManagerObject;
-    private Gamemanager gamemanager;
+    [FormerlySerializedAs("GameManagerObject")] public GameObject gameManagerObject;
+    private Gamemanager _gamemanager;
 
-    private int spawnTempo = 5;
+    private int _spawnTempo = 5;
     public float radius = 2.5f;
-    public float x_center;
-    public float y_center;
+    [FormerlySerializedAs("x_center")] public float xCenter;
+    [FormerlySerializedAs("y_center")] public float yCenter;
 
-    public GameObject[] MobTypes;
+    [FormerlySerializedAs("MobTypes")] public GameObject[] mobTypes;
 
 
 
     private void Start()
     {
-        gamemanager = GameManagerObject.GetComponent<Gamemanager>();
+        _gamemanager = gameManagerObject.GetComponent<Gamemanager>();
     }
 
 
@@ -33,33 +34,33 @@ public class Spawner : MonoBehaviour
 
         int difficulty = 1;
 
-        if (gamemanager.Wave < 2)
+        if (_gamemanager.wave < 2)
         {
             difficulty = 1;
-        }else if (gamemanager.Wave < 5)
+        }else if (_gamemanager.wave < 5)
         {
             difficulty = 2;
-        }else if (gamemanager.Wave < 8)
+        }else if (_gamemanager.wave < 8)
         {
             difficulty = 3;
         } else
         {
-            difficulty = MobTypes.Count();
+            difficulty = mobTypes.Count();
         }
  
 
 
-        x_center = transform.position.x;
-        y_center = transform.position.y;
-        for (int temp = 0; temp < spawnTempo; temp++)
+        xCenter = transform.position.x;
+        yCenter = transform.position.y;
+        for (int temp = 0; temp < _spawnTempo; temp++)
         {
             int spawnN = Random.Range(1, spawnCount);
             spawnCount -= spawnN;
 
             for (int _ = 0; _ < spawnN; _++)
             {
-                Vector2 spawnPos = randomPoint();
-                Instantiate(MobTypes[Random.Range(0,difficulty)], spawnPos, Quaternion.identity);
+                Vector2 spawnPos = RandomPoint();
+                Instantiate(mobTypes[Random.Range(0,difficulty)], spawnPos, Quaternion.identity);
 
             }
             yield return new WaitForSeconds(2f);
@@ -72,11 +73,11 @@ public class Spawner : MonoBehaviour
 
     }
 
-    Vector2 randomPoint()
+    Vector2 RandomPoint()
     {
         float t = 2 * Mathf.PI * Random.Range(0.0f,1.0f);
-        float x = (radius + Random.Range(-0.5f,0.5f)) * Mathf.Cos(t) + x_center;
-        float y = (radius + Random.Range(-0.5f, 0.5f)) * Mathf.Sin(t) + y_center;
+        float x = (radius + Random.Range(-0.5f,0.5f)) * Mathf.Cos(t) + xCenter;
+        float y = (radius + Random.Range(-0.5f, 0.5f)) * Mathf.Sin(t) + yCenter;
 
         return new Vector2(x, y);
     }

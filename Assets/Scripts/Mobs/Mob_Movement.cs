@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mob_Movement : MonoBehaviour
+public class MobMovement : MonoBehaviour
 {
-    private GameObject target;
-    private Vector3 direction;
+    private GameObject _target;
+    private Vector3 _direction;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
-        direction = (target.transform.position - transform.position);
-        Vector3 Look = transform.InverseTransformPoint(target.transform.position);
-        float angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg + 90;
+        _target = GameObject.FindGameObjectWithTag("Player");
+        _direction = (_target.transform.position - transform.position);
+        Vector3 look = transform.InverseTransformPoint(_target.transform.position);
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg + 90;
         transform.Rotate(0,0,angle);
     }
 
@@ -21,13 +21,13 @@ public class Mob_Movement : MonoBehaviour
     {
         
         //transform.Translate(gameObject.GetComponent<Mob_Properties>().speed * Time.deltaTime * direction);
-        transform.Translate(gameObject.GetComponent<Mob_Properties>().speed * Time.deltaTime * Vector3.down);
+        transform.Translate(gameObject.GetComponent<MobProperties>().speed * Time.deltaTime * Vector3.down);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) {
-            direction = new Vector3(0, 0, 0);
+            _direction = new Vector3(0, 0, 0);
             Destroy(gameObject);
         }
     }

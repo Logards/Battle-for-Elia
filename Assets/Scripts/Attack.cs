@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour
 {
     public GameObject arrow;
     public Tower tower = new Tower();
-    private bool isAttack = false;
+    private bool _isAttack = false;
 
     private void Start()
     {
@@ -25,14 +25,14 @@ public class Attack : MonoBehaviour
 
     public IEnumerator AttackSpeed(GameObject target)
     {
-        if (isAttack)
+        if (_isAttack)
         {
             yield break;
         }
-        isAttack = true;
+        _isAttack = true;
         GameObject currentArrow = Instantiate(arrow, transform.position, Quaternion.identity);
         currentArrow.GetComponent<Arrow>().target = target;
         yield return new WaitForSeconds(tower.attackSpeed);
-        isAttack = false;
+        _isAttack = false;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Player_Properties : MonoBehaviour
+public class PlayerProperties : MonoBehaviour
 {
 
     public int golds = 0;

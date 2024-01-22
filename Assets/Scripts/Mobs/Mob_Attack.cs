@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Mob_Attack : MonoBehaviour
+public class MobAttack : MonoBehaviour
 {
-    private GameObject target;
+    private GameObject _target;
     public float attackCooldown = 1f;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        _target = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +21,7 @@ public class Mob_Attack : MonoBehaviour
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator AttackCooldown()
     {
         Attack();
@@ -30,6 +31,6 @@ public class Mob_Attack : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log("Attack " + target.name);
+        Debug.Log("Attack " + _target.name);
     }
 }
