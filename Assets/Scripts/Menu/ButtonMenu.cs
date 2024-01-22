@@ -16,9 +16,15 @@ public class ButtonMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Options()
+    public void MuteButton(bool muted)
     {
-        SceneManager.LoadScene(2);
+        if (muted)
+        {
+            AudioListener.volume = 0;
+        }
+        else
+        {
+            AudioListener.volume = 1;
+        }
     }
-
 }
