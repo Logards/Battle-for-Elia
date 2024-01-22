@@ -8,10 +8,10 @@ public class ButtonMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MobAndAssetsScene 1");
     }
 
-    public void Quit()
+    public void Quit()  
     {
         Application.Quit();
     }
