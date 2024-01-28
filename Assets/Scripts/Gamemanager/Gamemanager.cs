@@ -5,13 +5,15 @@ using UnityEngine.Serialization;
 
 public class Gamemanager : MonoBehaviour
 {
-    [FormerlySerializedAs("Wave")] public int wave = 0;
+    public int wave = 0;
     private GameObject _spawner;
     private Spawner _spawn;
     void Start()
     {
         _spawner = GameObject.FindGameObjectWithTag("Spawn");
+        Debug.Log(_spawner);
         _spawn = _spawner.GetComponent<Spawner>();
+        Debug.Log(_spawn);
 
         StartCoroutine(WaveGenerator());
         
